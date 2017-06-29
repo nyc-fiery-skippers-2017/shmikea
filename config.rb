@@ -1,0 +1,5 @@
+require 'csv'
+require_relative 'model/shmikea'
+require_relative 'model/furniture'
+require_relative 'furniture_loader'
+require_relative 'controller/controller'
