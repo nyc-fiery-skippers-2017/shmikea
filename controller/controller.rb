@@ -8,6 +8,8 @@ class Controller
 
   def search_bot(user_input)
     case user_input
+    when 'search'
+      @view.display_catalogue(@model.search(ARGV[1]))
     when 'all'
       @view.display_catalogue(@model.furniture)
     end

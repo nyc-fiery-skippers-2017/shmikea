@@ -1,5 +1,5 @@
 class Furniture
-
+  attr_reader :type
   def initialize(args={})
     @type = args.fetch("type", "Miscellaneous")
     @name = args.fetch("name", "Unnamed")

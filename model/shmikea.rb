@@ -8,6 +8,10 @@ class Shmikea
 
   def load_furniture(filename)
     FurnitureLoader.parse(filename).map {|furniture| Furniture.new(furniture)}
-    end
+  end
+
+  def search(type)
+    furniture.select{|f| f.type.casecmp(type) == 0}
+  end
 end
 
