@@ -1,13 +1,11 @@
 class Controller
   def initialize(args={})
     @model = args.fetch(:model, Shmikea)
+    @view = args.fetch(:view, View)
     @filepath = args.fetch(:filepath, 'db/shmikea.csv')
 
     shmikea = @model.new(@filepath)
-    puts "Here's the catalogue!"
-    shmikea.furniture.each do |furniture|
-      puts furniture
-    end
+    @view.display_catalogue(shmikea.furniture)
   end
 
 end
